@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нова Пошта</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .spinner-border {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Пошук відділень "Нова Пошта"</h1>
+        <form id="searchForm">
+            <div class="mb-3">
+                <label for="cityInput" class="form-label">Населений пункт</label>
+                <input type="text" id="cityInput" class="form-control" placeholder="Введіть назву міста" required>
+            </div>
+            <div class="mb-3">
+                <label for="typeSelect" class="form-label">Тип</label>
+                <select id="typeSelect" class="form-select">
+                    <option value="warehouse">Відділення</option>
+                    <option value="postomat">Поштомат</option>
+                    <option value="address">Адреса</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Шукати</button>
+            <div class="spinner-border text-primary ms-3" role="status" id="spinner">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </form>
+        <div id="results" class="mt-4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
